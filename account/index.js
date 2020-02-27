@@ -1,12 +1,7 @@
 const entry = require("./entry")
 const config = require("./config")
-const Accounts = require("../api/Accounts")
 
-const account = accountFound => ({
+module.exports = {
   ...entry,
   config
-})
-
-module.exports = deepmerge({}, Accounts, {
-  account
-})
+}
