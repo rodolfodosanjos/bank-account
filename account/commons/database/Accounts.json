@@ -1,0 +1,13 @@
+[{
+  "id": 123,
+  "config_id": 123,
+  "balance": 10
+}, {
+  "id": 321,
+  "config_id": 321,
+  "balance": 100
+}, {
+  "id": 456,
+  "config_id": 456,
+  "balance": 0
+}]
