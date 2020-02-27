@@ -1,4 +1,4 @@
-const ValidationError = require("../../commons/ValidationError")
+const ValidationError = require("../../commons/error/ValidationError")
 const BlockedAccountError = require("../config/BlockedAccountError")
 
 const withdraw = (initialState, amountToWithdraw) => {

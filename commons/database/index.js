@@ -1,32 +1,5 @@
-const fs = require("fs")
-const path = require("path")
 const deepFreeze = require("deep-freeze")
-
-const openTable = tableName => {
-  const filePath = path.join(__dirname, `${tableName}.json`)
-
-  return new Promise((resolve, reject) =>
-    fs.readFile(filePath, {
-      encoding: 'utf-8'
-    }, (err, data) => {
-      if (err) reject(err)
-      resolve(JSON.parse(data))
-    })
-  )
-}
-
-const saveTable = (tableName, items) => {
-  const filePath = path.join(__dirname, `${tableName}.json`)
-
-  return new Promise((resolve, reject) =>
-    fs.writeFile(filePath,
-      JSON.stringify(items),
-      err => {
-        if (err) reject(err)
-        resolve()
-    })
-  )
-}
+const { openTable, saveTable } = require("./tableFileManipulation")
 
 const createId = () => String(Math.random() * 10000000000000000)
 
@@ -66,7 +39,7 @@ const createTable = tableName => {
 }
 
 const database = () => ({
-  DatabaseTests: createTable("Accounts"),
+  Accounts: createTable("Accounts"),
   DatabaseTests: createTable("DatabaseTests")
 })
 

@@ -1,5 +1,5 @@
 const entry = require("./entry")
-const ValidationError = require("../../commons/ValidationError")
+const ValidationError = require("../../commons/error/ValidationError")
 const BlockedAccountError = require("../config/BlockedAccountError")
 
 describe("withdraw", () => {
