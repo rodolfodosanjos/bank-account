@@ -40,6 +40,7 @@ const createTable = tableName => {
 
 const database = () => ({
   Accounts: createTable("Accounts"),
+  Entries: createTable("Entries"),
   DatabaseTests: createTable("DatabaseTests")
 })
 
